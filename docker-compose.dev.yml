@@ -1,0 +1,29 @@
+
+services:
+  opensourcesearch-api:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev  # Changed from Dockerfile.prod
+    container_name: opensourcesearch-api-dev  # Changed from -prod
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env.dev  # Changed from .env.prod (you'll need to create this)
+    networks:
+      - opensourcesearch-network
+    restart: unless-stopped  # Changed from always for dev
+    # Removed deploy section for development
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    volumes:
+      - .:/app  # Added for development hot reload
+    environment:
+      - MODE=dev  # Ensure development mode
+
+networks:
+  opensourcesearch-network:
+    driver: bridge

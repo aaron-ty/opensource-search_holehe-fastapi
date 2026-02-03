@@ -1,0 +1,31 @@
+
+
+
+# ===== requirements.txt =====
+
+# Core Framework
+fastapi==0.110.1
+uvicorn[standard]==0.29.0
+
+# Pydantic + Settings
+pydantic==2.7.0
+pydantic-settings==2.2.1
+
+# HTTP Client
+httpx==0.27.0
+
+# Phone Number Parsing (core to legacy logic)
+phonenumbers==8.13.45
+
+# OSINT Modules (core legacy dependencies)
+git+https://github.com/megadose/holehe.git
+ignorant==1.2
+
+# Logging
+python-json-logger==2.0.7
+
+# Email validation (FastAPI optional helper, harmless)
+email-validator==2.1.0.post1
+
+requests
+pydash
