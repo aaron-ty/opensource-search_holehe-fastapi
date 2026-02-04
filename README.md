@@ -1,7 +1,7 @@
 ---
 # Sfera OSINT Service
 
-** High-performance OSINT backend for email and phone intelligence.**
+### High-performance OSINT backend for email and phone intelligence.
 
 Automates reconnaissance across 200+ platforms, providing structured, reliable results for security, fraud detection, and compliance workflows.
 
