@@ -1,5 +1,4 @@
 ---
-
 # Sfera OSINT Service
 
 ** High-performance OSINT backend for email and phone intelligence.**
